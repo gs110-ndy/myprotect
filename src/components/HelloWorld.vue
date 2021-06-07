@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
-    helloworld
-  </div>
+  <el-button type="primary" @click="handleEnter" class="hello">
+    test
+  </el-button>
 </template>
 
 <script>
@@ -10,6 +10,15 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  mounted () {
+  },
+  methods: {
+    handleEnter () {
+      this.$router.push({
+        path: '/test'
+      })
     }
   }
 }
